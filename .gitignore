@@ -1,0 +1,2 @@
+#Excluding all database files but not the data folder.
+/data/*
