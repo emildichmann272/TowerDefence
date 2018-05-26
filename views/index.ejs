@@ -8,7 +8,40 @@
 	<script src="main.js"></script>
 </head>
 <body>
-<h1>Test</h1>
-<div id="serverData"></div>
+<div id="absolute">
+	<h1>Test</h1>
+	<div id="serverData"></div>
+	<div>Create a new Collection:</div>
+
+		Name:
+		<input type="text" id="createCollectionName">
+		<button id="createCollectionBtn">Create!</button>
+
+	<div id="collectionStatus">Status: </div>
+</div>
+<div class="gridContainer">
+	<% if (!login) {%>
+		<div id="login">
+			<form onsubmit="login()" id="loginForm">
+
+
+			</form>
+		</div>
+		<div id="register">
+			<form onsubmit="register()" id="register">
+
+
+			</form>
+		</div>
+	<% } else { %>
+		<div id="welcomeHeader"></div>
+		<div id="gameBtns"></div>
+	<% } %>
+	<div id="credits">
+		<p id="version"></p>
+		<p id="creators"></p>
+		<p id="links"></p>
+	</div>
+</div>
 </body>
 </html>

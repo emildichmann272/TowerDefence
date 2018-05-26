@@ -1,3 +1,60 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
 h1 {
 	font-size: 50px;
+}
+
+body {
+	height: 100%;
+}
+
+#absolute {
+	position: absolute;
+}
+
+.gridContainer {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(1, 1, 1, 0.25);
+	backdrop-filter: blur(2px);
+	display: grid;
+	position: absolute;
+	z-index: 1000;
+	grid-gap: 20px 20px;
+	grid-template-columns: 1fr 20% 20% 1fr;
+	grid-template-rows: 50px 30px 50% 50px 1fr;
+	grid-template-areas: '. . . . '
+											 '. welcomeHeader welcomeHeader .'
+											 '. login register .'
+											 '. footer footer .'
+											 '. . . .';
+}
+
+#login {
+	grid-area: login;
+	background-color: white;
+}
+
+#register {
+	grid-area: register;
+	background-color: white;
+}
+
+#credits {
+	grid-area: footer;
+	background-color: white;
+}
+
+#welcomeHeader {
+	grid-area: welcomeHeader;
+	background-color: blue;
+}
+
+#gameBtns {
+	grid-column: 2/4;
+	grid-row: 3/4;
+	background-color: white;
 }
